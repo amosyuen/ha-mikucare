@@ -1,0 +1,6 @@
+{
+  "name": "Miku Care",
+  "hacs": "1.30.0",
+  "homeassistant": "2023.1.0",
+  "render_readme": true
+}
