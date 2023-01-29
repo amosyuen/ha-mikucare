@@ -1,0 +1,12 @@
+{
+  "domain": "mikucare",
+  "name": "Miku Care",
+  "documentation": "https://github.com/amosyuen/ha-mikucare",
+  "issue_tracker": "https://github.com/amosyuen/ha-mikucare/issues",
+  "iot_class": "local_polling",
+  "version": "3.1.0",
+  "config_flow": true,
+  "dependencies": [],
+  "codeowners": ["@amosyuen"],
+  "requirements": ["boto3==1.26.59"]
+}
