@@ -1,0 +1,48 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Account is already configured",
+      "reauth_successful": "Reauth successful"
+    },
+    "step": {
+      "auth": {
+        "description": "Enter Miku Care login credentials",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "mfa_auth": {
+        "description": "Enter Multifactor Auth Code",
+        "data": {
+          "mfa_code": "Multifactor Auth Code"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid authentication",
+      "invalid_mfa_code": "Invalid Multifactor Auth Code",
+      "timeout_connect": "Timeout establishing connection",
+      "unknown": "Unexpected error"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "speaker_state": {
+        "state": {
+          "none": "No Sound",
+          "streaming": "Streaming",
+          "music": "Music"
+        }
+      },
+      "state": {
+        "state": {
+          "away": "Away",
+          "movement": "Movement",
+          "no_movement": "No Movement",
+          "sleeping": "Sleeping"
+        }
+      }
+    }
+  }
+}
