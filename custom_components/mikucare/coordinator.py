@@ -142,6 +142,7 @@ class MikuCareDeviceUpdateCoordinator(DataUpdateCoordinator):
         )
         # Must come after __init__
         self.data = MikuCareDeviceData()
+        self.data.update_from_device(device)
 
     async def connect(
         self,
@@ -181,10 +182,15 @@ class MikuCareDeviceUpdateCoordinator(DataUpdateCoordinator):
             device_id = self.device["deviceId"]
             if topic == f"{device_id}/analytics":
                 self.data.update_from_analytics_data(data.get("event"))
-                self.async_set_updated_data(self.data)
+                self._set_updated_data(self.data)
             if topic == f"{device_id}/rnd_data":
                 self.data.update_from_rnd_data(data.get("event"))
-                self.async_set_updated_data(self.data)
+                self._set_updated_data(self.data)
+
+    def _set_updated_data(self, data: MikuCareDeviceData) -> None:
+        self.data = data
+        self.last_update_success = True
+        self.async_update_listeners()
 
     async def disconnect(self):
         await self.client.disconnect()
