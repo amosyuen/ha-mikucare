@@ -25,6 +25,8 @@ _LOGGER: logging.Logger = logging.getLogger(__package__)
 
 
 def _get_auth_schema(data: dict[str:Any]):
+    if data is None:
+        data = {}
     return {
         vol.Required(CONF_USERNAME, default=data.get(CONF_USERNAME, "")): str,
         vol.Required(CONF_PASSWORD, default=data.get(CONF_PASSWORD, "")): str,
