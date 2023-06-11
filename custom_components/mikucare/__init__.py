@@ -62,7 +62,7 @@ async def async_create_data(
     for device in devices:
         coordinator = MikuCareDeviceUpdateCoordinator(hass, api, device)
         device_coordinators.append(coordinator)
-        futures.append(coordinator.connect())
+        futures.append(asyncio.create_task(coordinator.connect()))
     await asyncio.wait(futures)
 
     return {
