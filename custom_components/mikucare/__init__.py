@@ -98,8 +98,9 @@ async def async_unload_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> 
         )
     )
     if unloaded:
-        for coordinator in coordinators:
-            coordinator.disconnect()
+        await asyncio.gather(
+            *[coordinator.disconnect() for coordinator in coordinators]
+        )
         hass.data[DOMAIN].pop(config_entry.entry_id)
 
     return unloaded
