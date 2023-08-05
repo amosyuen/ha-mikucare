@@ -8,5 +8,5 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/amosyuen/ha-mikucare/issues",
   "requirements": ["boto3>=1.26.59"],
-  "version": "1.0.3"
+  "version": "1.0.4"
 }
