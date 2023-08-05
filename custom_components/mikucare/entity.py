@@ -21,7 +21,6 @@ class MikuCareCoordinatorEntity(CoordinatorEntity[MikuCareDeviceUpdateCoordinato
             return None
 
         return DeviceInfo(
-            id=device["deviceId"],
             identifiers={(DOMAIN, device["deviceId"])},
             name=f'{device["subjectName"]} Miku',
             manufacturer="Miku",
