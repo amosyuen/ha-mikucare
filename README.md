@@ -13,6 +13,11 @@
 
 [![Community Forum][forum-shield]][forum]
 
+> [!CAUTION]
+> This repository is no longer maintained. I do not own a miku anymore so I cannot test the repository.
+>
+> Looking for contributors to take over the repository.
+
 ## Functionality
 
 This integration gives basic functionality for the Miku Care baby monitors.
